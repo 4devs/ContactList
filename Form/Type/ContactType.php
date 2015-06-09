@@ -15,9 +15,9 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('slug', 'text')
-            ->add('name', 'trans_text', ['required' => false,'label'=>'Contact name'])
+            ->add('name', 'trans_text', ['required' => false, 'label' => 'Contact name'])
             ->add('address', 'trans', ['required' => false, 'locale_type' => 'address'])
-            ->add('location', 'geo_point', ['required' => false,'label'=>'Coordinates'])
+            ->add('location', 'geo_point', ['required' => false, 'label' => 'Coordinates'])
             ->add('show', 'checkbox', ['required' => false])
             ->add('connectList', 'collection', ['type' => 'connect', 'allow_delete' => true, 'allow_add' => true]);
     }
@@ -29,7 +29,7 @@ class ContactType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class'         => 'FDevs\ContactList\Model\Contact',
-            'translation_domain' => 'FDevsContactList'
+            'translation_domain' => 'FDevsContactList',
 
         ]);
     }
@@ -41,5 +41,4 @@ class ContactType extends AbstractType
     {
         return 'contact';
     }
-
 }

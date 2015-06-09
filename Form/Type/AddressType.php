@@ -29,7 +29,7 @@ class AddressType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class'         => 'FDevs\ContactList\Model\Address',
-            'translation_domain' => 'FDevsContactList'
+            'translation_domain' => 'FDevsContactList',
         ]);
     }
 
@@ -48,5 +48,4 @@ class AddressType extends AbstractType
     {
         return 'address';
     }
-
 }

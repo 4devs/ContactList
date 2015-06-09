@@ -7,7 +7,6 @@ use FDevs\Locale\LocaleInterface;
 
 class ContactFactory implements FactoryInterface
 {
-
     /** @var string */
     private $contactClass = 'FDevs\ContactList\Model\Contact';
 

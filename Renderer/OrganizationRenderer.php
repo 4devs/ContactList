@@ -124,5 +124,4 @@ class OrganizationRenderer implements RendererInterface
 
         return $text instanceof LocaleText ? ' <span itemprop="name">'.$text->getText().'</span>' : '';
     }
-
 }

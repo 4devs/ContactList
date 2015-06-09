@@ -55,6 +55,4 @@ class MemoryProvider implements ContactProviderInterface
     {
         return isset($this->contactList[$slug]);
     }
-
-
 }

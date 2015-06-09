@@ -239,7 +239,7 @@ class Contact implements ContactInterface
      */
     public function setShow($show)
     {
-        $this->show = (bool)$show;
+        $this->show = (bool) $show;
 
         return $this;
     }

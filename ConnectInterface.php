@@ -2,7 +2,6 @@
 
 namespace FDevs\ContactList;
 
-
 interface ConnectInterface
 {
     /**

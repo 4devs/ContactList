@@ -1,7 +1,6 @@
 <?php
 namespace FDevs\ContactList;
 
-
 interface AddressInterface
 {
     /**

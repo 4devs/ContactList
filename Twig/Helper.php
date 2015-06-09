@@ -2,7 +2,6 @@
 
 namespace FDevs\ContactList\Twig;
 
-
 use FDevs\ContactList\ContactInterface;
 use FDevs\ContactList\Provider\ContactProviderInterface;
 use FDevs\ContactList\Renderer\RendererInterface;

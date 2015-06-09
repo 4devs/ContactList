@@ -2,7 +2,6 @@
 
 namespace FDevs\ContactList\Renderer;
 
-use FDevs\ContactList\AddressInterface;
 use FDevs\ContactList\ConnectInterface;
 use FDevs\ContactList\ContactInterface;
 use FDevs\ContactList\Model\Address;

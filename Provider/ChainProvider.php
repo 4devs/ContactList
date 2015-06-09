@@ -6,7 +6,6 @@ use FDevs\ContactList\Exception\NotFoundException;
 
 class ChainProvider implements ContactProviderInterface
 {
-
     /** @var array|ContactProviderInterface[] */
     private $providers = [];
 
@@ -63,5 +62,4 @@ class ChainProvider implements ContactProviderInterface
 
         return false;
     }
-
 }

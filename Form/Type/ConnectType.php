@@ -76,7 +76,7 @@ class ConnectType extends AbstractType
                 [
                     'types'      => $this->types,
                     'data_class' => 'FDevs\ContactList\Model\Connect',
-                    'translation_domain' => 'FDevsContactList'
+                    'translation_domain' => 'FDevsContactList',
                 ]
             )
             ->addAllowedTypes('types', 'array');
@@ -89,5 +89,4 @@ class ConnectType extends AbstractType
     {
         return 'connect';
     }
-
 }

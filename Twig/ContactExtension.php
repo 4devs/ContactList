@@ -92,5 +92,4 @@ class ContactExtension extends \Twig_Extension
     {
         return $this->helper->getRenderer()->renderAddress($data, ['prefix' => $prefix, 'locale' => $locale]);
     }
-
 }
