@@ -1,0 +1,98 @@
+{% block fdevs_contact %}
+    {% spaceless %}
+        <div itemscope itemtype="http://schema.org/Organization">
+            {{- block('fdevs_organization_name') -}}
+            {{ address(contact.address,options.prefix,options.locale) }}
+            <ul class="list-inline social-buttons">
+                {% for oneConnect in contact.connectList %}
+                    {{ connect(oneConnect,options.prefix) }}
+                {% endfor %}
+            </ul>
+        </div>
+    {% endspaceless %}
+{% endblock fdevs_contact %}
+
+{% block fdevs_organization_name %}
+    {% set name = contact.name|t %}
+    {% if name %}<span itemprop="name">{{ name }}</span>{% endif %}
+{% endblock fdevs_organization_name %}
+
+{% block fdevs_address_name %}
+    <span>Address:</span>
+{% endblock fdevs_address_name %}
+
+{% block fdevs_address %}
+    {% spaceless %}
+        {{- block('fdevs_address_name') -}}
+        <div itemprop="address" class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+            {% if address.street %}
+                <span itemprop="streetAddress" class="postal-address__street">{{ address.street }}</span>
+            {% endif %}
+            {% if address.code %}
+                <span itemprop="postalCode" class="postal-address__code">{{ address.code }}</span>
+            {% endif %}
+            {% if address.box %}
+                <span itemprop="postOfficeBoxNumber" class="postal-address__box">{{ address.box }}</span>
+            {% endif %}
+            {% if address.region %}
+                <span itemprop="addressRegion" class="postal-address__region">{{ address.region }}</span>
+            {% endif %}
+            {% if address.locality %}
+                <span itemprop="addressLocality" class="postal-address__locality">{{ address.locality }}</span>
+            {% endif %}
+            {% if address.country %}
+                <span itemprop="addressCountry" class="postal-address__country">{{ address.country }}</span>
+            {% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock fdevs_address %}
+
+{% block fdevs_connect %}
+    <li class="connect"><a href="{{ connect.link }}" title="{{ connect.text }}"><i class="fa fa-{{ connect.type }}"></i></a>
+    </li>
+{% endblock fdevs_connect %}
+
+{% block email_connect %}
+    {% spaceless %}
+        <li itemprop="email" class="connect connect_email">
+            <a href="mailto:{{ connect.link }}" title="{{ connect.text }}">
+                <i class="fa fa-{{ connect.type }}"></i>{{ connect.link }}</a>
+        </li>
+    {% endspaceless %}
+{% endblock email_connect %}
+
+{% block fax_connect %}
+    {% spaceless %}
+        <li itemprop="faxNumber" class="connect connect_fax-number">
+            <a href="tel:{{ connect.link }}" title="{{ connect.text }}">
+                <i class="fa fa-{{ connect.type }}"></i>{{ connect.link }}</a>
+        </li>
+    {% endspaceless %}
+{% endblock fax_connect %}
+
+{% block github_connect %}
+    {% spaceless %}
+        <li class="connect connect_github">
+            <a href="{{ connect.link }}" title="{{ connect.text }}">
+                <i class="fa fa-{{ connect.type }}"></i>{{ connect.text }}</a>
+        </li>
+    {% endspaceless %}
+{% endblock github_connect %}
+
+{% block phone_connect %}
+    {% spaceless %}
+        <li itemprop="telephone" class="connect connect_phone">
+            <a href="tel:{{ connect.link }}" title="{{ connect.text }}">
+                <i class="fa fa-{{ connect.type }}"></i>{{ connect.link }}</a>
+        </li>
+    {% endspaceless %}
+{% endblock phone_connect %}
+
+{% block skype_connect %}
+    {% spaceless %}
+        <li itemprop="skype" class="connect connect_skype">
+            <a href="skype:{{ connect.link }}" title="{{ connect.text }}">
+                <i class="fa fa-{{ connect.type }}"></i>{{ connect.link }}</a>
+        </li>
+    {% endspaceless %}
+{% endblock skype_connect %}

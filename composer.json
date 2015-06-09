@@ -1,0 +1,35 @@
+{
+    "name": "fdevs/contact-list",
+    "license": "MIT",
+    "type": "library",
+    "description": "An object oriented Contact List library",
+    "homepage": "https://github.com/4devs/ContactList",
+    "keywords": ["contact"],
+    "authors": [
+        {
+            "name": "4devs company",
+            "homepage": "http://4devs.org"
+        },
+        {
+            "name": "Samusev Andrey",
+            "email": "andrey@4devs.org",
+            "homepage": "http://andrey.4devs.io/"
+        },
+        {
+            "name": "4devs Community",
+            "homepage": "https://github.com/4devs/ContactList/contributors"
+        }
+    ],
+    "require-dev": {
+        "twig/extensions": "~1.0"
+    },
+    "require": {
+        "php": ">=5.4",
+        "fdevs/geo": "~1.0",
+        "fdevs/locale": "~2.0"
+    },
+    "suggest": {},
+    "autoload": {
+        "psr-4": {"FDevs\\ContactList\\": ""}
+    }
+}

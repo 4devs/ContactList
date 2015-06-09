@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                    http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <embedded-document name="FDevs\ContactList\Model\Address">
+
+        <field fieldName="locale" type="string"/>
+        <field fieldName="country" type="string"/>
+        <field fieldName="locality" type="string"/>
+        <field fieldName="region" type="string"/>
+        <field fieldName="box" type="string"/>
+        <field fieldName="code" type="string"/>
+        <field fieldName="street" type="string"/>
+
+    </embedded-document>
+
+</doctrine-mongo-mapping>
