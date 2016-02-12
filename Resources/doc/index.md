@@ -236,7 +236,7 @@ create new template
 ```twig
 {# views/your_best_contact.html.twig #}
 
-{% extends 'contact.html.twig' %}
+{% extends 'fdevs_contact.html.twig' %}
 {% block fdevs_address %}
 {% spaceless %}
     <ul itemprop="address" class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
