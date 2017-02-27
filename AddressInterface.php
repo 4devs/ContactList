@@ -11,7 +11,6 @@ interface AddressInterface
      * @return self
      */
     public function setCountry($country);
-
     /**
      * set locality. For example, Moscow.
      *

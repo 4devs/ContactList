@@ -2,7 +2,10 @@
 
 namespace FDevs\ContactList\Form\Type;
 
+use FDevs\ContactList\Model\Address;
+use FDevs\Locale\Form\Type\LocaleType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,12 +17,12 @@ class AddressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('country', 'text', ['required' => false])
-            ->add('locality', 'text', ['required' => false])
-            ->add('region', 'text', ['required' => false])
-            ->add('box', 'text', ['required' => false])
-            ->add('code', 'text', ['required' => false])
-            ->add('street', 'text', ['required' => false]);
+            ->add('country', TextType::class, ['required' => false])
+            ->add('locality', TextType::class, ['required' => false])
+            ->add('region', TextType::class, ['required' => false])
+            ->add('box', TextType::class, ['required' => false])
+            ->add('code', TextType::class, ['required' => false])
+            ->add('street', TextType::class, ['required' => false]);
     }
 
     /**
@@ -28,7 +31,7 @@ class AddressType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class'         => 'FDevs\ContactList\Model\Address',
+            'data_class' => Address::class,
             'translation_domain' => 'FDevsContactList',
         ]);
     }
@@ -38,14 +41,6 @@ class AddressType extends AbstractType
      */
     public function getParent()
     {
-        return 'fdevs_locale';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getName()
-    {
-        return 'address';
+        return LocaleType::class;
     }
 }
